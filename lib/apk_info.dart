@@ -13,6 +13,7 @@ class ApkInfo {
     this.compileSdkVersion,
     this.minSdkVersion,
     this.targetSdkVersion,
+    this.icon,
   });
 
   final File file;
@@ -26,6 +27,7 @@ class ApkInfo {
   final String? compileSdkVersion;
   final String? minSdkVersion;
   final String? targetSdkVersion;
+  final String? icon; // Base64 encoded PNG image
 
   static const MethodChannel _channel = MethodChannel('io.flutter.plugins.apk_info');
 
@@ -47,6 +49,7 @@ class ApkInfo {
         compileSdkVersion: result["compileSdkVersion"] as String?,
         minSdkVersion: result["minSdkVersion"] as String?,
         targetSdkVersion: result["targetSdkVersion"] as String?,
+        icon: result["icon"] as String?,
       );
     } on PlatformException catch (e) {
       throw Exception("Failed to get APK info: ${e.message}");

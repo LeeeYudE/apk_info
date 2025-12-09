@@ -13,6 +13,7 @@ dependencies:
     path: ../
   permission_handler: ^11.3.1
   device_info_plus: ^11.2.0
+  path_provider: ^2.1.5
 
 dev_dependencies:
   integration_test:
@@ -21,5 +22,10 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^5.0.0
 
+
+
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/
